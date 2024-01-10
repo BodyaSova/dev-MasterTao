@@ -15,7 +15,23 @@
     }
 
     &__nav {
-        
+        width: 100%;
+        max-width: 602px;
+        display: flex;
+        justify-content: space-between;
+        margin: 4px 0 0 0;
+        a {
+            color: $text-color;
+            text-decoration: none;
+            padding: 10px 10px;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+
+    .btn {
+        padding: 13px 22px;
     }
 
 }
