@@ -1,8 +1,8 @@
-const burger = document.querySelector('.btn-burger')
+const burger = document.querySelector('.hamburger')
 const nav = document.querySelector('.header__nav')
 
 function burgerMenu () {
-    burger.classList.toggle('open');
+    burger.classList.toggle('is-active');
     nav.classList.toggle('show');
 }
 
