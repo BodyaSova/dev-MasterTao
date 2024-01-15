@@ -3,7 +3,7 @@
     display: inline-block;
     overflow: visible;
     margin: 0;
-    padding: 15px;
+    padding: 12px 0;
     cursor: pointer;
     transition-timing-function: linear;
     transition-duration: .15s;
@@ -28,8 +28,8 @@
   .hamburger-box {
     position: relative;
     display: inline-block;
-    width: 53px;
-    height: 12px
+    width: 27px;
+    height: 23px
   }
   
   .hamburger-inner {
@@ -65,6 +65,7 @@
     bottom: -10px
   }
 
+  /* Elastic */
   .hamburger--elastic .hamburger-inner {
     top: 2px;
     transition-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
