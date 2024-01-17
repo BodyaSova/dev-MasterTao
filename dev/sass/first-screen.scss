@@ -1,3 +1,7 @@
+.first-screen {
+    position: relative;
+}
+
 .banner {
     .slick-slide {
         height: 700px;
@@ -7,10 +11,6 @@
         align-items: center;
         border-radius: 20px;
         padding-bottom: 64px;
-    }
-
-    .container{
-        
     }
 
     &-title {
@@ -32,4 +32,24 @@
     .btn-lg {
         padding: 19.6px 28px;
     }
+
+    ul li::before {
+       content: none;
+    }
+
+    ul.slick-dots{
+        margin: -51px 0 0 ;
+        transform: translate(-16px, 1px);
+    }
+}
+
+.banner-arrows { 
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1600px;
+    width: 83%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -24px);
 }

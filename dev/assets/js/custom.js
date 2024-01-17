@@ -1,8 +1,9 @@
 // setting-name: setting-value - Подключение функций 
 $(document).ready(function(){
     $('#banner').slick({
-      arrows: false,
-      dots: false,
+      arrows: true,
+      dots: true,
+      appendArrows: $('.banner-arrows')
     });
   });
 
