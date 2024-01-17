@@ -1,0 +1,35 @@
+.banner {
+    .slick-slide {
+        height: 700px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        border-radius: 20px;
+        padding-bottom: 64px;
+    }
+
+    .container{
+        
+    }
+
+    &-title {
+        font-size: 56px;
+        font-weight: 700;
+        line-height: 126%; /* 70.56px */
+        text-transform: uppercase;
+        width: 463px;
+    }
+
+    &-subtitle{
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 135.5%; /* 27.1px */
+        width: 345px;
+        margin-bottom: 36px;
+    }
+
+    .btn-lg {
+        padding: 19.6px 28px;
+    }
+}

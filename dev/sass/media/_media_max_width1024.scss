@@ -14,10 +14,14 @@
         padding: 15px 0;
         margin-bottom: 145px;
         background-color: $bg-secondary;
+        box-shadow: 14px 22px 40px 0px rgba(30, 35, 66, 0.28);
         .btn {
             justify-content: center;
             font-size: 16px;
-            margin: 0 40px;
+            margin: 0 auto;
+            width: 320px;
+            max-width: 100%;
+            padding: 22px;
         }
     }
 
@@ -35,8 +39,4 @@
     .header__nav-item {
         margin-bottom: 11px;
     }
-}
-
-.header .btn {
-    padding: 22px;
 }
