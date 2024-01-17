@@ -21,6 +21,7 @@
         display: none;
         &.show{
             display: flex;
+            z-index: 1;
         }
         &-list {
             display: flex;

@@ -1,6 +1,6 @@
 @media screen and (max-width: 1024px) {
     .header{
-        padding: 6px 4px 39px;
+        padding: 6px 4px 10px;
     }
     
     .header__logo {
@@ -14,7 +14,6 @@
         padding: 15px 0;
         margin-bottom: 145px;
         background-color: $bg-secondary;
-        box-shadow: 14px 22px 40px 0px rgba(30, 35, 66, 0.28);
         .btn {
             justify-content: center;
             font-size: 16px;
@@ -38,5 +37,57 @@
 
     .header__nav-item {
         margin-bottom: 11px;
+    }
+
+    .banner-arrows {
+        display: none;
+    }
+
+    .banner-title{
+        text-align: center;
+        font-size: 32px;
+        width: 297px;
+    }
+
+    .banner-subtitle{
+        text-align: center;
+        font-size: 16px;
+        width: 277px;
+        margin-bottom: 20px;
+    }
+
+    .banner .slick-slide {
+        padding-bottom: 172px;
+        border-radius: 0;
+        background-position: center;
+        height: 649px;
+    }
+
+    .slick-slide:before {
+        content: "";
+        position: absolute;
+        z-index: 1;
+        background: rgba(0, 0, 0, 0.05);
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+
+    .banner .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 112px;
+        z-index: 2;
+    }
+
+    .banner.container-xxl {
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+        
+    .banner ul.slick-dots {
+        margin: -54px 0 0;
     }
 }
