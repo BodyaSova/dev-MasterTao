@@ -7,10 +7,10 @@
         height: 700px;
         background-repeat: no-repeat;
         background-size: cover;
+        background-position: center;
         display: flex;
         align-items: center;
-        border-radius: 20px;
-        padding-bottom: 64px;
+        padding: 0 92px 64px;
     }
 
     &-title {
@@ -47,9 +47,9 @@
     position: absolute;
     display: flex;
     justify-content: space-between;
-    max-width: 1600px;
-    width: 83%;
+    max-width: 1566px;
+    width: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%, -24px);
+    transform: translate(-50%, -45px);
 }

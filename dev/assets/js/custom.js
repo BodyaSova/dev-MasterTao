@@ -3,7 +3,15 @@ $(document).ready(function(){
     $('#banner').slick({
       arrows: true,
       dots: true,
-      appendArrows: $('.banner-arrows')
+      appendArrows: $('.banner-arrows'),
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: false,
+          }
+        },
+      ]
     });
   });
 
