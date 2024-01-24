@@ -1,6 +1,6 @@
 .first-screen {
     position: relative;
-    margin-bottom: 144px;
+    @extend .charter
 }
 
 .banner {
@@ -39,8 +39,11 @@
     }
 
     ul.slick-dots{
-        margin: -51px 0 0 ;
-        transform: translate(-16px, 1px);
+        position: absolute;
+        left: 50%;
+        bottom: 27px;
+        transform: translate(-50%, 0);
+        padding-left: 0;
     }
 }
 

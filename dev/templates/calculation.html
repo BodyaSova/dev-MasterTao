@@ -9,40 +9,40 @@
                 <div class="calculation-column">
                     <div class="input-box">
                         <label for="category">Категория товара:</label>
-                        <input type="text" placeholder="Категория товара">
+                        <input id="category" type="text" placeholder="Категория товара">
                     </div>
                     <div class="input-box">
                         <label for="weight">Вес груза (кг):</label>
-                        <input type="number" placeholder="Введите вес">
+                        <input id="weight" type="number" placeholder="Введите вес">
                     </div>
                 </div>
                 <div class="calculation-column">
                     <div class="input-box">
                         <label for="price">Стоимость груза:</label>
-                        <input type="number" placeholder="Введите стоимость">
+                        <input id="price" type="number" placeholder="Введите стоимость">
                     </div>
                     <div class="input-box">
                         <label for="size">Объем груза (м3):</label>
-                        <input type="number" placeholder="Введите объем">
+                        <input id="size" type="number" placeholder="Введите объем">
                     </div>
                 </div>
             </div>
             <!-- chekcbox, input -->
             <div class="calculation-row">
-                <div class="calculation-column move-chekbox">
-                    <div class="input-box move-input">
-                        <input type="checkbox">
+                <div class="calculation-column">
+                    <div class="input-box">
+                        <input id="insurance" type="checkbox">
                         <label for="insurance">Страховка</label>
                     </div>
                     <div class="input-box">
-                        <input type="checkbox">
+                        <input id="customs" type="checkbox">
                         <label for="customs">Таможенное оформление</label>
                     </div>
                 </div>
                 <div class="calculation-column">
                     <div class="input-box">
                         <label for="code">Код ТН ВЭД:</label>
-                        <input type="number" placeholder="Введите код">
+                        <input id="code" type="text" placeholder="Введите код">
                     </div>
                 </div>
             </div>
@@ -50,9 +50,13 @@
             <div class="calculation-row">
                 <div class="calculation-column">
                     <div class="input-box">
-                        <div class="file-name">фотография.jpeg</div>
-                        <label for="fileInput">Загрузить фото товара</label>
-                        <input type="file" id="fileInput">
+                        <div class="input-box">
+                            <div id="file-name">
+                                фотография.jpeg
+                            </div>
+                            <input class="input-file" id="fileInput" name="fileInput" type="file">
+                            <label for="fileInput">Загрузить фото товара</label>
+                        </div>
                     </div>
                 </div>
             </div>

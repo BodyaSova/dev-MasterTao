@@ -1,9 +1,15 @@
-///fonts///
-$font-primary: "Proxima Nova";
-
 ///colors///
 $color-primary: #E58D35;
 $color-secondary: #89C249;
 $bg-primary:#282B38;
 $bg-secondary: #363A4D;
 $text-color: #fff;
+
+///fonts///
+$font-primary: "Proxima Nova";
+
+// Margin, Padding
+$section-margin-lg: 100px;
+$section-margin: 60px;
+$container-padding: 15px;
+$container-mobile-padding: 20px;

@@ -1,27 +1,37 @@
+.calculation {
+    @extend .charter
+}
+
 .calculation .container {
     position: relative;
 }
 
 .calculation__form {
-    width: 100%;
     max-width: 626px;
-    padding: 50px 35px 41px;
+    padding: 50px 50px 41px;
     background-color: $bg-secondary;
     border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.calculation-row {
+    display: flex;
+    gap: 30px;
 }
 
 .calculation-column {
     display: flex;
     flex-direction: column;
     width: 100%;
+    gap: 16px;
 
     .input-box {
-        display: flex;
-        flex-direction: column;
-        margin: 0 15px 20px;
 
         input {
             border-radius: 10px;
+            width: 100%;
             padding: 16px 20px;
             border: none;
 
@@ -43,6 +53,7 @@
         label {
             font-size: 15px;
             font-weight: 600;
+            width: 100%;
             line-height: 126%; /* 18.9px */
             margin-bottom: 6px;
         }
@@ -50,14 +61,11 @@
         & .btn {
             max-width: 253px;
             padding: 19.6px 29px;
-        }
-
-        &.move-input {
-            margin-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         & .file-name {
-            padding-top: 5px;
+            padding-top: 7px;
             font-size: 15px;
             font-weight: 400;
             line-height: 126%; /* 18.9px */
@@ -84,13 +92,14 @@
     }
 }
 
-.move-chekbox {
-    padding-top: 20px;
-}
-
 .calculation__img-box {
     position: absolute;
-    right: 0;
-    top: -35px;
+    right: -2px;
+    top: -34px;
     max-width: 560px;
+}
+
+.move-checkbox {
+    padding-top: 20px;
+    gap: 8px;
 }
