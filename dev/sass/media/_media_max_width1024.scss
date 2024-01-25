@@ -106,6 +106,7 @@
 
     // Calculation
     .calculation{
+        margin-bottom: $section-margin;
 
         &__form {
             padding: 46px 35px 34px;
@@ -145,6 +146,33 @@
 
         .btn-lg .icon {
             margin: 0 -14px 0 70px;
+        }
+    }
+
+    // Advantages
+    .advantages {
+
+        .container-xxl {
+            border-radius: 0;
+
+            .container {
+                padding: 58px 0 30px;
+
+                .slick-slider {
+                    ul.slick-dots{
+                        position: absolute;
+                        bottom: 8px;
+                    }
+                }
+            }
+
+            .title-template{
+                margin-bottom: 44px;
+
+                h2 {
+                    font-size: 24px;
+                }
+            }
         }
     }
 }

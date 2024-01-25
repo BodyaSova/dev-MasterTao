@@ -1,0 +1,48 @@
+.advantages {
+
+    .container-xxl {
+        background-color: $bg-secondary;
+        border-radius: 20px;
+
+        .container {
+            padding: 90px 0 64px;
+        }
+    }
+    
+    .advantage {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 48px;
+
+        &__img-box {
+            width: 113px;
+            height: 113px;
+            border-radius: 90px;
+            border: 1px solid #6C7188;
+            margin-bottom: 22px;
+            padding: 10px;
+            & img {
+                background-color: $color-secondary;
+                width: 100%;
+                height: auto;
+                border-radius: 50%;
+                object-fit: scale-down;
+            }
+        }
+
+        &__text-box {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 124.5%; /* 22.41px */
+            max-width: 263px;
+        }
+    }
+
+    ul li::before {
+        content: none;
+     }
+
+     @extend .charter
+}

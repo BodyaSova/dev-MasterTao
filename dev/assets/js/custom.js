@@ -1,5 +1,6 @@
 // Slider
 $(document).ready(function(){
+  // Banner-Slider
   // setting-name: setting-value - Подключение функций 
     $('#banner').slick({
       arrows: true,
@@ -13,6 +14,18 @@ $(document).ready(function(){
           }
         },
       ]
+    });
+
+    // Advantages-Slider
+    $(window).on('load resize', function() {
+      if ($(window).width() < 1024) {
+        $('#advantages-slider:not(.slick-initialized)').slick({
+          arrows: false,
+          dots: true,
+        });
+      } else {
+        $("#advantages-slider.slick-initialized").slick("unslick");
+      }
     });
 
   // Burger-menu

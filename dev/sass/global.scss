@@ -135,7 +135,7 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 .container-xxl {
-    max-width: 1850px;
+    max-width: 1820px;
 }
 
 .btn {
@@ -345,7 +345,7 @@ li.slick-active {
         width: 85px;
         height: 2px;
         left: 50%;
-        top: calc(100% - 2px);
+        top: calc(100% - 5px);
         transform: translate(-50%, 0);
         background-color: $color-secondary;
     }
