@@ -19,6 +19,15 @@
             }
         }
     }
+
+    .banner,
+    .advantages,
+    .delivery,
+    .services {
+        ul li::before {
+            content: none;
+         }
+    }
     // Header
     .header {
         padding: 6px 4px 10px;
@@ -105,7 +114,7 @@
     }
 
     // Calculation
-    .calculation{
+    .calculation {
         margin-bottom: $section-margin;
 
         &__form {
@@ -151,17 +160,18 @@
 
     // Advantages
     .advantages {
+        margin-bottom: 54px;
 
         .container-xxl {
             border-radius: 0;
 
             .container {
-                padding: 58px 0 30px;
+                padding: 53px 0 48px;
 
                 .slick-slider {
                     ul.slick-dots{
                         position: absolute;
-                        bottom: 8px;
+                        bottom: -3px;
                     }
                 }
             }
@@ -171,6 +181,76 @@
 
                 h2 {
                     font-size: 24px;
+                }
+            }
+        }
+    }
+
+    // Delivery
+    .delivery {
+        margin-bottom: $section-margin;
+        .title-template h2 {
+            font-size: 24px;
+        }
+
+        .card {
+            margin: 0 12px 32px;
+            padding: 0px 0px 27px;
+
+            &__img {
+                width: 100%;
+            }
+
+            &__button {
+                
+                .btn {
+                width: 138px;
+                }
+            }
+        }
+    }
+
+    // Sevices
+    .services {
+        .title-template {
+            margin-bottom: 35px;
+
+            h2 {
+                font-size: 24px;
+            }
+        }
+
+        .container {
+            padding: 54px 0 48px;
+        }
+
+        .container-fluid {
+            border-radius: 0;
+        }
+
+        .card {
+            padding: 0px 10px 47px 12px;
+            margin: 0 15px 33px;
+
+            &__title {
+                h4 {
+                    margin-bottom: 13px;
+                }
+            }
+
+            &__subtitle {
+                p {
+                    font-size: 14px;
+                    line-height: 124.5%; /* 17.43px */
+                    margin-top: 0;
+                    margin-bottom: 7px;
+                }
+            }
+
+            &__button {
+                .btn {
+                    width: 153px;
+                    justify-content: center;
                 }
             }
         }

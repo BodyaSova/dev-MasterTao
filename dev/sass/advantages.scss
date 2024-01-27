@@ -1,12 +1,12 @@
 .advantages {
 
-    .container-xxl {
-        background-color: $bg-secondary;
-        border-radius: 20px;
+    .container {
+        padding: 90px 0 48px;
+    }
+    
 
-        .container {
-            padding: 90px 0 64px;
-        }
+    .row {
+        --bs-gutter-x: 0.5rem;
     }
     
     .advantage {
@@ -39,10 +39,6 @@
             max-width: 263px;
         }
     }
-
-    ul li::before {
-        content: none;
-     }
 
      @extend .charter
 }

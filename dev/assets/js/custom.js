@@ -15,52 +15,99 @@ $(document).ready(function(){
       ]
     });
 
-    // Advantages-Slider
-    $(window).on('load resize', function() {
-      if ($(window).width() < 1024) {
-        $('#advantages-slider:not(.slick-initialized)').slick({
+  // Advantages-Slider
+  $(window).on('load resize', function() {
+    if ($(window).width() < 1024) {
+      $('#advantages-slider:not(.slick-initialized)').slick({
+        arrows: false,
+        dots: true,
+      });
+    } else {
+      $("#advantages-slider.slick-initialized").slick("unslick");
+    }
+  });
+
+  // Delivery Slider 
+  $('.delivery-slider').slick({
+    infinite: true,
+    arrows: true,
+    appendArrows: $('.delivery-arrows'),
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
           arrows: false,
-          dots: true,
-        });
-      } else {
-        $("#advantages-slider.slick-initialized").slick("unslick");
-      }
+          slidesToShow: 1,
+          dots: true
+        }
+      },
+    ]
+  });
+
+  // Services Slider
+  $('.services-slider').slick({
+      infinite: true,
+      arrows: true,
+      appendArrows: $('.services-arrows'),
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
+        {
+          breakpoint: 1024,
+          settings: {
+            arrows: false,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: true
+          }
+        },
+      ]
     });
 
   // Burger-menu
-const burgers = document.querySelectorAll('.hamburger')
-const nav = document.querySelector('.header__nav')
+  const burgers = document.querySelectorAll('.hamburger')
+  const nav = document.querySelector('.header__nav')
 
-if (burgers.length > 0) {
-  burgers.forEach(element => {
-    element.addEventListener('click', function(){
-      element.classList.toggle('is-active');
-      nav.classList.toggle('show');
+  if (burgers.length > 0) {
+    burgers.forEach(element => {
+      element.addEventListener('click', function(){
+        element.classList.toggle('is-active');
+        nav.classList.toggle('show');
+      })
     })
-  })
-}
+  }
 
-// File-Input
-const fileInput = document.querySelector('#fileInput');
-const fileName  = document.querySelector('#file-name')
+  // File-Input
+  const fileInput = document.querySelector('#fileInput');
+  const fileName  = document.querySelector('#file-name')
 
-fileInput.addEventListener('change', function() {
-  fileName.innerHTML = this.files[0].name
-});
+  fileInput.addEventListener('change', function() {
+    fileName.innerHTML = this.files[0].name
+  });
 
-// Move-chekbox "Calculation"
-const chekboxes = document.querySelectorAll('[type="checkbox"]');
-if(chekboxes.length > 0) {
-  chekboxes.forEach(chekbox => {
-    chekbox.closest('.calculation-column').classList.add('move-checkbox');
-  })
-}
+  // Move-chekbox "Calculation"
+  const chekboxes = document.querySelectorAll('[type="checkbox"]');
+  if(chekboxes.length > 0) {
+    chekboxes.forEach(chekbox => {
+      chekbox.closest('.calculation-column').classList.add('move-checkbox');
+    })
+  }
 
-// Move-input-name "Calculation"
-const file = document.querySelectorAll('.input-file')
-if(file.length > 0) {
-  file.forEach(item => {
-    item.closest('.calculation-column').style.paddingTop = '6px'
-  })
-}
+  // Move-code "Calculation"
+  const codes = document.querySelectorAll('#code');
+  if(codes.length > 0) {
+    codes.forEach(code => {
+      code.closest('.calculation-column').classList.add('move-code');
+    })
+  }
+
+  // Move-input-name "Calculation"
+  const file = document.querySelectorAll('.input-file')
+  if(file.length > 0) {
+    file.forEach(item => {
+      item.closest('.calculation-column').style.paddingTop = '6px'
+    })
+  }
 });

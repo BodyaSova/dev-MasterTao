@@ -1,0 +1,89 @@
+.delivery {
+    position: relative;
+
+    .slick-slide {
+        display: flex;
+        align-items: center;
+        }
+
+    .card {
+        max-width: 360px;
+        border-radius: 20px;
+        background: $bg-secondary;
+        box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
+        margin: 0 15px;
+        padding: 0 20px 27px;
+
+        &__img {
+            width: calc(100% + 40px);
+            margin-left: -20px;
+            margin-right: -20px;
+            margin-bottom: 27px;
+        }
+
+        &__title {
+            text-align: center;
+            line-height: 124.5%; /* 27.39px */
+            margin-bottom: 12px;
+        }
+
+        .info-atributes{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 10px;
+
+            .atributes-item {
+                display: flex;
+                align-items: center;
+
+                img {
+                    margin-right: 8px;
+                }
+            }
+        }
+
+        &__info {
+            .card-price {
+                text-align: center;
+                margin-bottom: 22px;
+                line-height: 124.5%; /* 27.39px */
+                font-size: 22px;
+                font-weight: 400;
+                color: #FFF;
+
+                .price-item-1 {
+                    color: #A3A3A3;
+                }
+
+                .price-item-2 {
+                    font-size: 45px;
+                }
+            }
+        }
+
+        &__button {
+            display: flex;
+            gap: 14px;
+
+            .btn {
+                width: 153px;
+                padding: 13px 5px;
+                justify-content: center;
+            }
+        }
+
+    }
+    
+    .delivery-arrows {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1370px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 15px);
+    }
+    @extend .charter
+}

@@ -1,0 +1,31 @@
+.services {
+    position: relative;
+
+    .container{
+        padding: 90px 0 100px;
+    }
+
+    .card {
+        max-width: 360px;
+        border-radius: 20px;
+        margin: 0 15px;
+        padding: 0px 23px 33px 30px;
+        border: none;
+
+        &__title {
+            margin-top: 250px;
+        }
+    }
+
+    .services-arrows {
+        position: absolute;
+        display: flex;
+        justify-content: space-between;
+        max-width: 1370px;
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, 15px);
+    }
+    @extend .charter
+}
