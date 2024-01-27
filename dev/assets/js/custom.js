@@ -1,4 +1,3 @@
-// Slider
 $(document).ready(function(){
   // Banner-Slider
   // setting-name: setting-value - Подключение функций 
@@ -29,15 +28,17 @@ $(document).ready(function(){
     });
 
   // Burger-menu
-const burger = document.querySelector('.hamburger')
+const burgers = document.querySelectorAll('.hamburger')
 const nav = document.querySelector('.header__nav')
 
-function burgerMenu () {
-    burger.classList.toggle('is-active');
-    nav.classList.toggle('show');
+if (burgers.length > 0) {
+  burgers.forEach(element => {
+    element.addEventListener('click', function(){
+      element.classList.toggle('is-active');
+      nav.classList.toggle('show');
+    })
+  })
 }
-
-burger.addEventListener('click', burgerMenu);
 
 // File-Input
 const fileInput = document.querySelector('#fileInput');
@@ -48,10 +49,18 @@ fileInput.addEventListener('change', function() {
 });
 
 // Move-chekbox "Calculation"
-const TypeTheChekbox = document.querySelector('[type=checkbox]');
-const code = document.querySelector('#code');
+const chekboxes = document.querySelectorAll('[type="checkbox"]');
+if(chekboxes.length > 0) {
+  chekboxes.forEach(chekbox => {
+    chekbox.closest('.calculation-column').classList.add('move-checkbox');
+  })
+}
 
-TypeTheChekbox.closest('.calculation-column').classList.add('move-checkbox');
-code.closest('.calculation-column').classList.add('move-code');
-fileName.classList.add('file-name');
+// Move-input-name "Calculation"
+const file = document.querySelectorAll('.input-file')
+if(file.length > 0) {
+  file.forEach(item => {
+    item.closest('.calculation-column').style.paddingTop = '6px'
+  })
+}
 });
