@@ -41,6 +41,10 @@
         transform: translate(-50%, 0);
         padding-left: 0;
     }
+
+    ul li::before {
+        content: none;
+     }
 }
 
 .banner-arrows { 

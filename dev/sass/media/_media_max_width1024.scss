@@ -1,25 +1,4 @@
 @media screen and (max-width: 1024px) {
-    .first-screen {
-        margin-bottom: 54px;
-    }
-    
-    .title-template.col-lg-7 {
-        margin-bottom: 56px;
-        
-        h2 {
-            text-align: center;
-            font-size: 24px;
-            
-            &::after {
-                position: absolute;
-                left: 50%;
-                top: calc(100% - 2px);
-                transform: translate(-50%, 0);
-                margin: 0;
-            }
-        }
-    }
-
     .banner,
     .advantages,
     .delivery,
@@ -28,6 +7,13 @@
             content: none;
          }
     }
+
+    .title-template {
+         h2 {
+            font-size: 24px;
+        }
+    }
+        
     // Header
     .header {
         padding: 6px 4px 10px;
@@ -67,8 +53,12 @@
                 margin-bottom: 11px;
             }
         }
+    }  
+
+    // First-screen
+    .first-screen {
+        margin-bottom: 54px;
     }
-    
 
     // Banner
     .banner {
@@ -116,6 +106,22 @@
     // Calculation
     .calculation {
         margin-bottom: $section-margin;
+
+        .title-template.col-lg-7 {
+            margin-bottom: 56px;
+            
+            h2 {
+                text-align: center;
+                
+                &::after {
+                    position: absolute;
+                    left: 50%;
+                    top: calc(100% - 2px);
+                    transform: translate(-50%, 0);
+                    margin: 0;
+                }
+            }
+        }
 
         &__form {
             padding: 46px 35px 34px;
@@ -176,12 +182,8 @@
                 }
             }
 
-            .title-template{
+            .title-template {
                 margin-bottom: 44px;
-
-                h2 {
-                    font-size: 24px;
-                }
             }
         }
     }
@@ -189,9 +191,6 @@
     // Delivery
     .delivery {
         margin-bottom: $section-margin;
-        .title-template h2 {
-            font-size: 24px;
-        }
 
         .card {
             margin: 0 12px 32px;
@@ -212,12 +211,10 @@
 
     // Sevices
     .services {
+        margin-bottom: 54px;
+        
         .title-template {
             margin-bottom: 35px;
-
-            h2 {
-                font-size: 24px;
-            }
         }
 
         .container {
@@ -253,6 +250,41 @@
                     justify-content: center;
                 }
             }
+        }
+    }
+
+    // About
+    .about {
+
+        .container {
+            flex-direction: column;
+        }
+
+        .title-template {
+            margin-top: 0;
+            margin-bottom: 25px;
+            &:after {
+                left: 50%;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .about-text {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            p {
+                font-size: 16px;
+                line-height: 149.5%; /* 23.92px */
+                text-align: justify;
+                margin-bottom: 20px;
+            }
+        }
+
+        .about__img-box {
+            margin-left: 0;
         }
     }
 }

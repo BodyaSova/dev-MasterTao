@@ -1,0 +1,36 @@
+.about {
+
+    .container {
+        display: flex;
+    }
+
+    .title-template {
+        margin-top: 54px;
+        h2 {
+            text-align: left;
+        }
+
+        &::after {
+            left: 0;
+            transform: translate(0, 0);
+        }
+    }
+    
+    &-text {
+        p {
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 170%; /* 30.6px */
+            max-width: 555px;
+        }
+
+        span {
+            font-weight: 400;
+        }
+    }
+
+    &__img-box {
+        margin-left: 35px;
+    }
+    @extend .charter
+}
