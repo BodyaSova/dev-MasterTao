@@ -12,6 +12,18 @@
          h2 {
             font-size: 24px;
         }
+
+        h3 {
+            font-size: 16px;
+        }
+
+        &::after {
+            position: absolute;
+            left: 50%;
+            top: calc(100% - 2px);
+            transform: translate(-50%, 0);
+            margin: 0;
+        }
     }
         
     // Header
@@ -107,6 +119,12 @@
     .calculation {
         margin-bottom: $section-margin;
 
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
         .title-template.col-lg-7 {
             margin-bottom: 56px;
             
@@ -166,27 +184,21 @@
 
     // Advantages
     .advantages {
-        margin-bottom: 54px;
+        margin-bottom: $section-margin;
+        @include default-bg-mobile;
+        padding: 55px 0 89px;
 
-        .container-xxl {
-            border-radius: 0;
+        .title-template {
+            margin-bottom: 42px;
+        }
 
-            .container {
-                padding: 53px 0 48px;
-
-                .slick-slider {
-                    ul.slick-dots{
-                        position: absolute;
-                        bottom: -3px;
-                    }
+            .slick-slider {
+                ul.slick-dots{
+                    position: absolute;
+                    bottom: -47px;
                 }
             }
-
-            .title-template {
-                margin-bottom: 44px;
-            }
         }
-    }
 
     // Delivery
     .delivery {
@@ -211,43 +223,18 @@
 
     // Sevices
     .services {
-        margin-bottom: 54px;
-        
-        .title-template {
-            margin-bottom: 35px;
-        }
-
-        .container {
-            padding: 54px 0 48px;
-        }
-
-        .container-fluid {
-            border-radius: 0;
-        }
+        margin-bottom: $section-margin;
+        @include default-bg-mobile;
 
         .card {
             padding: 0px 10px 47px 12px;
             margin: 0 15px 33px;
 
-            &__title {
-                h4 {
-                    margin-bottom: 13px;
-                }
-            }
-
             &__subtitle {
                 p {
                     font-size: 14px;
                     line-height: 124.5%; /* 17.43px */
-                    margin-top: 0;
                     margin-bottom: 7px;
-                }
-            }
-
-            &__button {
-                .btn {
-                    width: 153px;
-                    justify-content: center;
                 }
             }
         }
@@ -257,7 +244,9 @@
     .about {
 
         .container {
+            display: flex;
             flex-direction: column;
+            align-items: center;
         }
 
         .title-template {
@@ -285,6 +274,82 @@
 
         .about__img-box {
             margin-left: 0;
+        }
+    }
+
+    // Faq
+    .faq {
+        
+        .accordion {
+            margin-bottom: 28px;
+        }
+
+        .accordion-body {
+            padding-right: 10px;
+        }
+
+        .d-flex {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .faq__form-title {
+            text-align: center;
+        }
+
+        .faq__form-subtitle {
+            text-align: center;
+        }
+
+        .faq__form {
+            width: 335px;
+            padding: 38px 20px;
+            margin-left: 0;
+
+            .btn-lg {
+                .icon {
+                    margin: 0 -14px 0 auto;
+                }
+            }
+        }
+    }
+
+    // Seo
+    .seo {
+        @include default-bg-mobile;
+
+        .d-flex {
+            flex-direction: column-reverse;
+            align-items: center;
+
+            &:last-of-type {
+                flex-direction: column;
+            }
+        }
+    }
+
+    // Footer
+    .footer {
+        .transportation-footer,
+        .services-footer,
+        .info-footer {
+            display: none;
+        }
+
+        .container:before {
+            width: 335px;
+            height: 2px;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        .main-info {
+            display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
         }
     }
 }

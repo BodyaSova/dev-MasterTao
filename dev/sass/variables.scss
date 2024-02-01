@@ -13,3 +13,27 @@ $section-margin-lg: 100px;
 $section-margin: 60px;
 $container-padding: 15px;
 $container-mobile-padding: 20px;
+
+@mixin default-bg {
+    margin-top: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: $section-margin-lg;
+    max-width: 1820px;
+    padding: 90px 85px 100px;
+    border-radius: 20px;
+    background: $bg-secondary;
+    
+    &:nth-child(odd) {
+        .template-title {
+            &:after {
+                background-color: $color-primary;
+            }
+        }
+    }
+}
+
+    @mixin default-bg-mobile {
+        padding: 55px 0 60px;
+        border-radius: 0;
+    }

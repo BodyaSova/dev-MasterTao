@@ -18,7 +18,7 @@
             width: calc(100% + 40px);
             margin-left: -20px;
             margin-right: -20px;
-            margin-bottom: 27px;
+            margin-bottom: 30px;
         }
 
         &__title {
@@ -31,7 +31,7 @@
             display: flex;
             justify-content: center;
             gap: 30px;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
 
             .atributes-item {
                 display: flex;
@@ -85,5 +85,4 @@
         left: 50%;
         transform: translate(-50%, 15px);
     }
-    @extend .charter
 }

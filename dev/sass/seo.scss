@@ -1,0 +1,40 @@
+.seo {
+    @include default-bg;
+    margin-bottom: 62px;
+
+    .title-template {
+        margin-bottom: 84px;
+        h3 {
+            font-weight: 400;
+            line-height: 124.5%;
+        }
+    }
+
+    .seo-text {
+        max-width: 528px;
+        margin-bottom: 32px;
+
+        p {
+            font-size: 17px;
+            font-weight: 300;
+            line-height: 156.5%; /* 26.605px */;
+            margin-bottom: 23px;
+        }
+
+        .btn-lg {
+            margin-top: -5px;
+        }
+    }
+
+    .seo-button {
+        margin-top: 50px;
+
+        .btn-lg {
+            padding: 19.6px 27px;
+        }
+    }
+
+    .d-flex {
+        gap: 46px;
+    }
+}

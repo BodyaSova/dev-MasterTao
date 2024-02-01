@@ -1,9 +1,7 @@
 .services {
+    @include default-bg;
+    margin-bottom: 89px;
     position: relative;
-
-    .container{
-        padding: 90px 0 100px;
-    }
 
     .card {
         max-width: 360px;
@@ -14,6 +12,18 @@
 
         &__title {
             margin-top: 250px;
+            margin-bottom: 14px;
+        }
+
+        &__subtitle {
+            font-size: 15px;
+            line-height: 124.5%; /* 18.675px */
+        }
+
+        &__button {
+            .btn {
+                padding: 13px 33px;
+            }
         }
     }
 
@@ -27,5 +37,4 @@
         left: 50%;
         transform: translate(-50%, 15px);
     }
-    @extend .charter
 }

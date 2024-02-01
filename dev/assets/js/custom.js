@@ -1,4 +1,13 @@
 $(document).ready(function(){
+
+// Add class .charter
+function addClassCharter() {
+  const section = document.querySelectorAll('section')
+  section.forEach(item => item.classList.add('charter'))
+}
+
+document.querySelector('.home-page') ? addClassCharter() : null;
+
   // Banner-Slider
   // setting-name: setting-value - Подключение функций 
     $('#banner').slick({
@@ -16,16 +25,34 @@ $(document).ready(function(){
     });
 
   // Advantages-Slider
-  $(window).on('load resize', function() {
-    if ($(window).width() < 1024) {
-      $('#advantages-slider:not(.slick-initialized)').slick({
-        arrows: false,
-        dots: true,
-      });
-    } else {
-      $("#advantages-slider.slick-initialized").slick("unslick");
-    }
-  });
+  mobileOnlySlider("#advantages-slider", true, false, 1024);
+
+  function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+    
+    var slider = $($slidername);
+    var settings = {
+      mobileFirst: true,
+      dots: $dots,
+      arrows: $arrows,
+      responsive: [
+        {
+          breakpoint: $breakpoint,
+          settings: "unslick"
+        }
+      ]
+    };
+  
+    slider.slick(settings);
+  
+    $(window).on("resize", function () {
+      if ($(window).width() > $breakpoint) {
+        return;
+      }
+      if (!slider.hasClass("slick-initialized")) {
+        return slider.slick(settings);
+      }
+    });
+  }
 
   // Delivery Slider 
   $('.delivery-slider').slick({
@@ -45,6 +72,7 @@ $(document).ready(function(){
       },
     ]
   });
+  
 
   // Services Slider
   $('.services-slider').slick({
@@ -59,7 +87,6 @@ $(document).ready(function(){
           settings: {
             arrows: false,
             slidesToShow: 1,
-            slidesToScroll: 1,
             dots: true
           }
         },

@@ -1,0 +1,77 @@
+.footer {
+    position: relative;
+    .container {
+        margin-bottom: 50px;
+
+        .transportation-footer,
+        .services-footer,
+        .info-footer {
+            ul > li {
+                margin-bottom: 5px;
+            }
+        }
+
+        a {
+            color: #85899C;
+            line-height: 160.5%; /* 25.68px */
+
+            &:hover {
+                color: $color-primary;
+                transition: .3s;
+            }
+        }
+
+        ul {
+            padding-left: 0;
+        }
+
+        ul li:before {
+            content: none;
+        }
+
+        &:before {
+            content: "";
+            background: $color-primary;
+            width: 1140px;
+            height: 2px;
+            position: absolute;
+        }
+
+        .information {
+            padding-top: 40px;
+            display: flex;
+            gap: 87px;
+        }
+
+        .main-info {
+            max-width: 263px;
+
+            .logo-footer {
+                margin-bottom: 29px;
+            }
+
+            &-footer {
+                margin-bottom: 21px;
+                
+                ul > li {
+                font-size: 14px;
+                line-height: 162.5%; /* 22.75px */
+                }
+            }
+        }
+
+        .social-link {
+            margin-right: 4px;
+            text-decoration: none;
+
+            &:hover {
+                opacity: .6;
+            }
+        }
+
+        .title-footer {
+            line-height: 146%; /* 29.2px */
+            margin-bottom: 14px;
+        }
+    }
+}

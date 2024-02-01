@@ -1,34 +1,30 @@
 .advantages {
-
-    .container {
-        padding: 90px 0 48px;
-    }
-    
+    @include default-bg;
+    margin-bottom: 83px;
 
     .row {
-        --bs-gutter-x: 0.5rem;
+        row-gap: 48px;
     }
     
     .advantage {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         text-align: center;
-        margin-bottom: 36px;
 
         &__img-box {
             width: 113px;
             height: 113px;
-            border-radius: 90px;
+            border-radius: 50%;
             border: 1px solid #6C7188;
-            margin-bottom: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 22px;
             padding: 10px;
+            
             & img {
                 background-color: $color-secondary;
                 width: 100%;
-                height: auto;
                 border-radius: 50%;
-                object-fit: scale-down;
+                object-fit: none;
             }
         }
 
@@ -36,9 +32,9 @@
             font-size: 18px;
             font-weight: 400;
             line-height: 124.5%; /* 22.41px */
-            max-width: 263px;
+            font-weight: 400;
+            max-width: 250px;
+            margin: 0 auto;
         }
     }
-
-     @extend .charter
 }

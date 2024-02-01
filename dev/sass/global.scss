@@ -134,15 +134,6 @@ input[type=number]::-webkit-outer-spin-button {
     margin-left: auto;
 }
 
-.container-xxl {
-    max-width: 1820px;
-}
-
-.container-fluid {
-    border-radius: 20px;
-    background: $bg-secondary;
-}
-
 .btn {
     font-weight: 600;
     font-size: 15px;
@@ -316,8 +307,13 @@ li.slick-active {
     margin-left: auto;
     margin-right: auto;
     margin-bottom: $section-margin-lg;
-    max-width: 1920px;
+    max-width: 1820px;
 
+    &.container-fluid {
+        border-radius: 20px;
+        background: $bg-secondary;
+    }
+    
     &:nth-child(odd) {
         .title-template {
             &::after{
