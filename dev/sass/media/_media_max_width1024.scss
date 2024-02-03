@@ -204,20 +204,13 @@
     .delivery {
         margin-bottom: $section-margin;
 
-        .card {
-            margin: 0 12px 32px;
-            padding: 0px 0px 27px;
-
-            &__img {
-                width: 100%;
-            }
-
-            &__button {
-                
-                .btn {
-                width: 138px;
-                }
-            }
+        .template-slider {
+            width: 390px;
+            margin: 0 auto;
+            
+            .slick-slide {
+              margin: 0 15px;
+          }
         }
     }
 
@@ -226,14 +219,10 @@
         margin-bottom: $section-margin;
         @include default-bg-mobile;
 
-        .card {
-            padding: 0px 10px 47px 12px;
-            margin: 0 15px 33px;
-
-            &__subtitle {
+        .template-card {
+            &__info {
                 p {
                     font-size: 14px;
-                    line-height: 124.5%; /* 17.43px */
                     margin-bottom: 7px;
                 }
             }

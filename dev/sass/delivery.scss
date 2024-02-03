@@ -1,88 +1,100 @@
-.delivery {
-    position: relative;
-
-    .slick-slide {
-        display: flex;
-        align-items: center;
-        }
-
-    .card {
+    .template-card {
+        background-color: $bg-secondary;
+        padding: 0 20px 27px;
         max-width: 360px;
         border-radius: 20px;
-        background: $bg-secondary;
-        box-shadow: 5px 15px 40px 0px rgba(30, 35, 66, 0.15);
-        margin: 0 15px;
-        padding: 0 20px 27px;
-
-        &__img {
-            width: calc(100% + 40px);
-            margin-left: -20px;
-            margin-right: -20px;
-            margin-bottom: 30px;
-        }
-
-        &__title {
-            text-align: center;
-            line-height: 124.5%; /* 27.39px */
-            margin-bottom: 12px;
-        }
-
-        .info-atributes{
+        text-align: center;
+        overflow: hidden;
+    
+        >.img-box {
+            height: 229px;
+            margin: 0 -20px 27px;
             display: flex;
             justify-content: center;
-            gap: 30px;
-            margin-bottom: 30px;
-
-            .atributes-item {
+    
+            img {
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    
+        &__title {
+            margin-bottom: 12px;
+        }
+    
+        &__atributes {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            margin-bottom: 7px;
+    
+            &-item {
                 display: flex;
-                align-items: center;
-
-                img {
-                    margin-right: 8px;
+                gap: 7px;
+    
+                .img-box {
+                    width: 24px;
+                    height: 24px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
         }
-
-        &__info {
-            .card-price {
-                text-align: center;
-                margin-bottom: 22px;
-                line-height: 124.5%; /* 27.39px */
+    
+        &__price {
+            margin-bottom: 11px;
+    
+            span {
                 font-size: 22px;
-                font-weight: 400;
-                color: #FFF;
-
-                .price-item-1 {
+    
+                &:first-child {
                     color: #A3A3A3;
                 }
-
-                .price-item-2 {
-                    font-size: 45px;
-                }
+            }
+    
+            strong {
+                font-size: 46px;
             }
         }
-
-        &__button {
+    
+        &__btn-row {
             display: flex;
             gap: 14px;
-
+    
             .btn {
-                width: 153px;
-                padding: 13px 5px;
+                width: 100%;
                 justify-content: center;
+                padding: 13px 10px;
             }
         }
-
     }
     
-    .delivery-arrows {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        max-width: 1370px;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 15px);
+    .template-slider {
+        margin: 0 -15px;
+    
+        .slick-slide {
+            margin: 0 15px;
+        }
+    
+        .template-card {
+            margin: 0 auto;
+        }
+    
+        .slick-arrow {
+            position: absolute;
+            z-index: 1;
+            top: calc(50% - 20px);
+        }
+    
+        .slick-prev {
+            left: -100px;
+            transform: translate(0, -50%) rotate(180deg);
+    
+        }
+    
+        .slick-next {
+            right: -100px;
+            transform: translate(0, -50%);
+        }
     }
-}

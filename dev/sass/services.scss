@@ -1,40 +1,29 @@
 .services {
     @include default-bg;
-    margin-bottom: 89px;
-    position: relative;
 
-    .card {
-        max-width: 360px;
-        border-radius: 20px;
-        margin: 0 15px;
-        padding: 0px 23px 33px 30px;
-        border: none;
+    .template-card {
+        text-align: left;
 
-        &__title {
-            margin-top: 250px;
+        h4 {
+            margin-bottom: 13px;
+        }
+
+        &__info {
             margin-bottom: 14px;
-        }
 
-        &__subtitle {
-            font-size: 15px;
-            line-height: 124.5%; /* 18.675px */
-        }
-
-        &__button {
-            .btn {
-                padding: 13px 33px;
+            p {
+                font-size: 15px;
+                line-height: 124.5%;
+                margin-bottom: 0;
             }
         }
-    }
 
-    .services-arrows {
-        position: absolute;
-        display: flex;
-        justify-content: space-between;
-        max-width: 1370px;
-        width: 100%;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, 15px);
+        &__btn-row {
+
+            .btn {
+                padding: 13px 33px;
+                width: auto;
+            }
+        }
     }
 }
