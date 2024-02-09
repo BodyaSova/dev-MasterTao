@@ -1,8 +1,27 @@
 .services {
-    @include default-bg;
-
     .template-card {
         text-align: left;
+        position: relative;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(0deg, rgba(4, 5, 17, 0.91) 0%, rgba(88, 88,88, 0) 100%);
+            z-index: 1;
+        }
+
+        >.img-box {
+            img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+        }
 
         h4 {
             margin-bottom: 13px;
@@ -10,20 +29,16 @@
 
         &__info {
             margin-bottom: 14px;
-
-            p {
-                font-size: 15px;
-                line-height: 124.5%;
-                margin-bottom: 0;
-            }
+            font-size: 15px;
+            line-height: 124.5%;
+            font-weight: 400;
         }
+    }
 
-        &__btn-row {
-
-            .btn {
-                padding: 13px 33px;
-                width: auto;
-            }
-        }
+    .tempalte-card__title,
+    .template-card__info,
+    .template-card__btn-row {
+        position: relative;
+        z-index: 2;
     }
 }

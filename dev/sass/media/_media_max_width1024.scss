@@ -25,6 +25,31 @@
             margin: 0;
         }
     }
+
+    .template-slider {
+        .slick-next {
+       right: 100px;
+       }
+       
+       .slick-prev {
+           left: 100px;
+       }
+   }
+
+   .calculation,
+   .advantages,
+   .delivery,
+   .services
+    {
+        margin-bottom: $section-margin;
+   }
+
+   
+   .advantages,
+   .services,
+   .seo {
+    @include default-bg-mobile;
+   }
         
     // Header
     .header {
@@ -117,7 +142,6 @@
 
     // Calculation
     .calculation {
-        margin-bottom: $section-margin;
 
         .container {
             display: flex;
@@ -184,8 +208,6 @@
 
     // Advantages
     .advantages {
-        margin-bottom: $section-margin;
-        @include default-bg-mobile;
         padding: 55px 0 89px;
 
         .title-template {
@@ -201,24 +223,9 @@
         }
 
     // Delivery
-    .delivery {
-        margin-bottom: $section-margin;
-
-        .template-slider {
-            width: 390px;
-            margin: 0 auto;
-            
-            .slick-slide {
-              margin: 0 15px;
-          }
-        }
-    }
 
     // Sevices
     .services {
-        margin-bottom: $section-margin;
-        @include default-bg-mobile;
-
         .template-card {
             &__info {
                 p {
@@ -231,7 +238,6 @@
 
     // About
     .about {
-
         .container {
             display: flex;
             flex-direction: column;
@@ -267,14 +273,15 @@
     }
 
     // Faq
-    .faq {
-        
+    .faq { 
         .accordion {
             margin-bottom: 28px;
         }
 
         .accordion-body {
             padding-right: 10px;
+            padding-left: 22px;
+            font-size: 14px;
         }
 
         .d-flex {
@@ -288,6 +295,11 @@
 
         .faq__form-subtitle {
             text-align: center;
+        }
+
+        .accordion-button {
+            padding-left: 22px;
+            font-size: 16px;
         }
 
         .faq__form {
@@ -305,7 +317,9 @@
 
     // Seo
     .seo {
-        @include default-bg-mobile;
+        .title-template {
+            margin-bottom: 45px;
+        }
 
         .d-flex {
             flex-direction: column-reverse;
@@ -332,13 +346,19 @@
             transform: translate(-50%, 0);
         }
 
-        .main-info {
-            display: flex;
-            margin-left: auto;
-            margin-right: auto;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
+        .container {
+            .main-info {
+                display: flex;
+                margin-left: auto;
+                margin-right: auto;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+    
+                &-footer {
+                    margin-bottom: 0px;
+                }
+            }
         }
     }
 }
