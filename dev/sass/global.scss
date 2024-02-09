@@ -314,11 +314,6 @@ li.slick-active {
     margin-right: auto;
     margin-bottom: $section-margin-lg;
     max-width: 1820px;
-
-    &.container-fluid {
-        border-radius: 20px;
-        background: $bg-secondary;
-    }
     
     &:nth-child(odd) {
         .title-template {

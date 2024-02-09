@@ -102,7 +102,7 @@
         padding: 0;
         
         .slick-slide {
-            height: calc(100vh - 75px);
+            height: calc(100vh - -30px);
             padding: 0 40px;
 
             .container {
@@ -223,9 +223,20 @@
         }
 
     // Delivery
-
+    .delivery {
+        .title-template {
+            margin-bottom: 29px;
+        }
+    }
+    
     // Sevices
     .services {
+        padding: 55px 0 43px;
+
+        .title-template {
+            margin-bottom: 33px;
+        }
+
         .template-card {
             &__info {
                 p {
@@ -238,6 +249,7 @@
 
     // About
     .about {
+        margin-bottom: $section-margin;
         .container {
             display: flex;
             flex-direction: column;
@@ -269,19 +281,51 @@
 
         .about__img-box {
             margin-left: 0;
+
+            .img-fluid {
+                height: 277px;
+            }
         }
     }
 
     // Faq
     .faq { 
+        margin-bottom: $section-margin;
+
+        .title-template {
+            margin-bottom: 27px;
+        }
+
         .accordion {
             margin-bottom: 28px;
         }
 
         .accordion-body {
-            padding-right: 10px;
+            padding-right: 24px;
             padding-left: 22px;
             font-size: 14px;
+            padding-bottom: 12px;
+        }
+
+        .accordion-item {
+            margin-bottom: 14px;
+        }
+
+        .accordion-item:last-child {
+            .accordion-button {
+                padding: 18.5px 24px;
+                &:after {
+                margin-left: auto;
+            }
+            }
+        }
+
+        .accordion-button:not(.collapsed) {
+            padding: 18px 24px 0 24px;
+        }
+
+        .accordion-button::after {
+            margin-left: 40px;
         }
 
         .d-flex {
@@ -298,8 +342,8 @@
         }
 
         .accordion-button {
-            padding-left: 22px;
             font-size: 16px;
+            padding: 12px 24px;
         }
 
         .faq__form {
@@ -317,17 +361,48 @@
 
     // Seo
     .seo {
+        padding: 55px 0 56px;
+
         .title-template {
-            margin-bottom: 45px;
+            margin-bottom: 40px;
+        }
+
+        .container {
+            padding-right: 20px;
+            padding-left: 20px;
         }
 
         .d-flex {
             flex-direction: column-reverse;
+            gap: 2px;
             align-items: center;
 
             &:last-of-type {
                 flex-direction: column;
             }
+        }
+
+        .seo-text {
+            max-width: 100%;
+            margin-bottom: 10px;
+
+            p {
+            font-size: 16px;
+            text-align: justify;
+            line-height: 149.5%;
+            }
+        }
+
+        .seo-img {
+            margin-bottom: 36px;
+            .img-fluid {
+                width: 335px;
+                height: 220px;
+            }
+        }
+
+        .seo-button {
+            margin-top: 28px;
         }
     }
 
